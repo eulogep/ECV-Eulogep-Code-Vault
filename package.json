@@ -1,0 +1,29 @@
+{
+  "name": "ecv",
+  "version": "0.1.0",
+  "description": "Eulogep Code Vault — encrypted source vault with policy-gated access for humans and AI agents.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ecv": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.js",
+    "native/bin"
+  ],
+  "scripts": {
+    "build": "tsc -p . && chmod +x dist/cli.js",
+    "build:native": "sh native/macos/build.sh",
+    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "typecheck": "tsc -p . --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

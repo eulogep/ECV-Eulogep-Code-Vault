@@ -1,0 +1,10 @@
+node_modules/
+dist/
+native/bin/
+*.tmp
+.DS_Store
+
+# Local vaults and private provenance material must never be committed
+.ecv/
+ECF_PRIVATE_REGISTRY/
+*.seed
